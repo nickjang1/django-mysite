@@ -56,5 +56,4 @@ typing-extensions==3.7.4.2
 urllib3==1.25.9
 utils-py==0.3.0
 virtualenv==20.0.21
-wxPython==4.0.7.post2
 gunicorn==19.7.1
