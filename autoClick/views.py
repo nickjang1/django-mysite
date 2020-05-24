@@ -18,7 +18,7 @@ def button(request):
 
 
 def coordinate(request):
-    subprocess.run([sys.executable, './coordinate.py'],
+    subprocess.run([sys.executable, 'coordinate.py'],
                    shell=False, stdout=subprocess.PIPE)
     out = 'saved the coordinate'
     return render(request, 'index.html', {'data2': out})
@@ -28,7 +28,7 @@ def inputClicks(request):
     c = request.POST.get('int')
     i = request.POST.get('interval')
 
-    npPath = "/autoClick"
+    npPath = "./"
     npName = os.path.join(npPath, "ci.npy")
     np.save(npName, arr=c)
 
@@ -38,7 +38,7 @@ def inputClicks(request):
 
 
 def click(request):
-    out = subprocess.run([sys.executable, './click.py'],
+    out = subprocess.run([sys.executable, 'click.py'],
                          shell=False, stdout=subprocess.PIPE)
     return render(request, 'index.html', {'data1': out.stdout})
 

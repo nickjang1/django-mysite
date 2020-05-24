@@ -3,7 +3,7 @@ import os
 import numpy as np
 from pynput import mouse
 
-npPath = "/autoClick"
+npPath = "./"
 npName = os.path.join(npPath, "coord1.npy")
 
 # def on_move(x, y):
